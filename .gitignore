@@ -8,6 +8,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.egg-info/
+*.pyc
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
