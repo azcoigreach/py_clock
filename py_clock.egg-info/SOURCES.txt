@@ -1,7 +1,0 @@
-py_clock.py
-py_clock.egg-info/PKG-INFO
-py_clock.egg-info/SOURCES.txt
-py_clock.egg-info/dependency_links.txt
-py_clock.egg-info/entry_points.txt
-py_clock.egg-info/requires.txt
-py_clock.egg-info/top_level.txt
