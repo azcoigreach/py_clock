@@ -14,7 +14,10 @@ def cli():
     while True:
         try:
             now = datetime.datetime.now()
-            fig = Figlet(font='FUTURE')
+            try:
+                fig = Figlet(font='future')
+            except:
+                fig = Figlet(font='future_1')
             click.echo(Fore.LIGHTCYAN_EX + fig.renderText(str(now)))
             time.sleep(0.2)
             click.clear()
