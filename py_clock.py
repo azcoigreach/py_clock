@@ -1,28 +1,26 @@
 #!/bin/env python
 import click
-from colorama import init, Fore
 import datetime
 from pyfiglet import Figlet
 import time
 import sys
-
-init(convert=None)
 
 @click.command()
 def cli():
     click.clear()
     while True:
         try:
-            now = datetime.datetime.now()
+            now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             try:
                 fig = Figlet(font='future')
             except:
                 fig = Figlet(font='future_1')
-            click.echo(Fore.LIGHTCYAN_EX + fig.renderText(str(now)))
-            time.sleep(0.2)
+
+            click.echo(click.style(fig.renderText(str(now)),fg='cyan'))
+            time.sleep(1)
             click.clear()
         except KeyboardInterrupt:
-            click.echo(Fore.LIGHTRED_EX + 'exiting.')
+            click.echo(click.style('exiting.', fg='red'))
             sys.exit(-1)
 
 
